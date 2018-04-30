@@ -1,5 +1,6 @@
 import argparse
 import sys
+import os
 import logging
 from .core import (
     DEFAULTS,
