@@ -16,7 +16,6 @@ def parse_args(args):
         description = "Execute Jupyter notebooks on the command line.",
         epilog = "Note: nbexec uses Jupyter's nbconvert module. See https://nbconvert.readthedocs.io/en/latest/execute_api.html for context.",
         formatter_class = argparse.ArgumentDefaultsHelpFormatter,
-        allow_abbrev = False
     )
 
     parser.add_argument(
