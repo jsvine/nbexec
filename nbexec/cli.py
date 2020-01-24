@@ -39,6 +39,12 @@ def parse_args(args):
     )
 
     parser.add_argument(
+        "--allow-iopub-timeout",
+        action = "store_true",
+        help = "Don't raise an error on IOPub timeouts."
+    )
+
+    parser.add_argument(
         "--kernel-name",
         default = DEFAULTS["kernel_name"],
         help = "The name of the kernel to use, e.g., 'python3'. If None, nbexec uses the kernel specified in the notebook."

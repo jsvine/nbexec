@@ -16,7 +16,8 @@ logger.setLevel(logging.INFO)
 DEFAULTS = {
     "timeout": None,
     "kernel_name": None,
-    "stdout": False
+    "stdout": False,
+    "allow_iopub_timeout": True,
 }
 
 class NBExecError(Exception):
@@ -42,6 +43,7 @@ def exec_nb(path, **kwargs):
 
     ep = ExecutePreprocessor(
         timeout = settings["timeout"],
+        raise_on_iopub_timeout = not settings["allow_iopub_timeout"],
         kernel_name = kernel_name
     )
 

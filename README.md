@@ -44,7 +44,8 @@ nbexec --max-depth 3 path/to/directory-of-notebooks
 
 ``` 
 usage: nbexec [-h] [--max-depth MAX_DEPTH] [--timeout TIMEOUT]
-              [--kernel-name KERNEL_NAME] [--quiet] [--stdout]
+              [--allow-iopub-timeout] [--kernel-name KERNEL_NAME] [--quiet]
+              [--stdout]
               notebooks [notebooks ...]
 
 Execute Jupyter notebooks on the command line.
@@ -60,6 +61,9 @@ optional arguments:
                         (default: 1)
   --timeout TIMEOUT     How long to wait, in seconds, for any given notebook
                         cell to before raising an exception. (default: None)
+  --allow-iopub-timeout
+                        Don't raise an error on IOPub timeouts. (default:
+                        False)
   --kernel-name KERNEL_NAME
                         The name of the kernel to use, e.g., 'python3'. If
                         None, nbexec uses the kernel specified in the
