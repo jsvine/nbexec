@@ -4,11 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-"e1839a8" = {path = ".", editable = true}
+jupyter_client = "*"
+nbconvert = "*"
+nbformat = "*"
 
 [dev-packages]
 nose = "*"
 ipykernel = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.9"
