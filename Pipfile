@@ -7,6 +7,7 @@ name = "pypi"
 jupyter_client = "*"
 nbconvert = "*"
 nbformat = "*"
+nbexec = {path = "."}
 
 [dev-packages]
 nose = "*"
