@@ -1,4 +1,4 @@
-[![Version](https://img.shields.io/pypi/v/nbexec.svg)](https://pypi.python.org/pypi/nbexec) [![Build status](https://travis-ci.org/jsvine/nbexec.png)](https://travis-ci.org/jsvine/nbexec) [![Code coverage](https://img.shields.io/coveralls/jsvine/nbexec.svg)](https://coveralls.io/github/jsvine/nbexec) [![Support Python versions](https://img.shields.io/pypi/pyversions/nbexec.svg)](https://pypi.python.org/pypi/nbexec)
+[![Version](https://img.shields.io/pypi/v/nbexec.svg)](https://pypi.python.org/pypi/nbexec) [![Support Python versions](https://img.shields.io/pypi/pyversions/nbexec.svg)](https://pypi.python.org/pypi/nbexec)
 
 # nbexec
 
