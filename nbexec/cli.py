@@ -45,6 +45,12 @@ def parse_args(args):
     )
 
     parser.add_argument(
+        "--record-timing",
+        action = "store_true",
+        help = "Store the execution timings in each cell's metadata."
+    )
+
+    parser.add_argument(
         "--kernel-name",
         default = DEFAULTS["kernel_name"],
         help = "The name of the kernel to use, e.g., 'python3'. If None, nbexec uses the kernel specified in the notebook."

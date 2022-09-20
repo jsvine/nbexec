@@ -44,8 +44,8 @@ nbexec --max-depth 3 path/to/directory-of-notebooks
 
 ``` 
 usage: nbexec [-h] [--max-depth MAX_DEPTH] [--timeout TIMEOUT]
-              [--allow-iopub-timeout] [--kernel-name KERNEL_NAME] [--quiet]
-              [--stdout]
+              [--allow-iopub-timeout] [--record-timing]
+              [--kernel-name KERNEL_NAME] [--quiet] [--stdout]
               notebooks [notebooks ...]
 
 Execute Jupyter notebooks on the command line.
@@ -64,6 +64,8 @@ optional arguments:
   --allow-iopub-timeout
                         Don't raise an error on IOPub timeouts. (default:
                         False)
+  --record-timing       Store the execution timings in each cell's metadata.
+                        (default: False)
   --kernel-name KERNEL_NAME
                         The name of the kernel to use, e.g., 'python3'. If
                         None, nbexec uses the kernel specified in the
@@ -79,8 +81,17 @@ Note: nbexec uses Jupyter's nbconvert module. See
 https://nbconvert.readthedocs.io/en/latest/execute_api.html for context.
 ```
 
+## Changelog
+
+### v0.2.0
+
+- By default, do not record cell execution timings. (Use `--record-timing` to record them.)
+
+### v0.1.0
+
+- By default, raise errors on IOPub timeouts. (Use `--allow-iopub-timeout` to prevent raising those errors.)
+
 ## Possible future features / improvements
 
 - [ ] Full test coverage
-- [ ] Option to ignore notebook execution errors (if executing multiple notebooks)
 - [ ] [Your idea here]

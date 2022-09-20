@@ -18,6 +18,7 @@ DEFAULTS = {
     "kernel_name": None,
     "stdout": False,
     "allow_iopub_timeout": True,
+    "record_timing": False,
 }
 
 class NBExecError(Exception):
@@ -44,6 +45,7 @@ def exec_nb(path, **kwargs):
     ep = ExecutePreprocessor(
         timeout = settings["timeout"],
         raise_on_iopub_timeout = not settings["allow_iopub_timeout"],
+        record_timing = settings["record_timing"],
         kernel_name = kernel_name
     )
 
